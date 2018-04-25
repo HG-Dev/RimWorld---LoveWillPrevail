@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <InspirationDef>
+        <defName>InspiredHeroic</defName>
+        <label>valiant love</label>
+        <baseCommonality>0</baseCommonality>
+        <baseDurationDays>0.2</baseDurationDays>
+        <beginLetterLabel>Attempted heroics</beginLetterLabel>
+        <beginLetter>{0} is risking life and limb to protect a loved one. The strain on HIS nerves is draining stamina.</beginLetter>
+        <beginLetterDef>PositiveEvent</beginLetterDef>
+        <endMessage>{0} is exhausted.</endMessage>
+        <baseInspectLine>Inspired: Valiant love</baseInspectLine>
+        <requiredCapacities>
+            <li>Moving</li>
+        </requiredCapacities>
+        <requiredSkills>
+            <Melee>10</Melee>
+        </requiredSkills>
+        <!-- Experimental -->
+        <restFallFactorOffset>3</restFallFactorOffset>
+        <statFactors>
+            <MoveSpeed>2</MoveSpeed>
+            <PainShockThreshold>5</PainShockThreshold>
+            <AimingDelayFactor>0.5</AimingDelayFactor>
+            <DoorOpenSpeed>5</DoorOpenSpeed>
+            <MedicalTendSpeed>2</MedicalTendSpeed>
+            <MedicalTendQuality>2</MedicalTendQuality>
+            <TrapSpringChance>0</TrapSpringChance>
+        </statFactors>
+        <statOffsets>
+            <MeleeDPS>5</MeleeDPS>
+            <ShootingAccuracy>5</ShootingAccuracy>
+            <MeleeHitChance>1</MeleeHitChance>
+            <MeleeDodgeChance>1</MeleeDodgeChance>
+            <SharpDamageMultiplier>3</SharpDamageMultiplier>
+            <ArmorRating_Heat>10</ArmorRating_Heat>
+        </statOffsets>
+    </InspirationDef>
+
+</Defs>

@@ -12,12 +12,12 @@ namespace Suffixware
 	{
         private static HarmonyInstance harmony = null;
 
-        static internal HarmonyInstance instance
+        static internal HarmonyInstance Instance
         {
             get
             {
                 if (harmony == null)
-                    harmony = HarmonyInstance.Create("com.hg-dev.rimworld.mod.lovewillprevail");
+                    harmony = HarmonyInstance.Create("com.hg-dev.rimworld.mod.lwp");
                 return harmony;
             }
         }
@@ -25,10 +25,10 @@ namespace Suffixware
         public static void RunPatches()
         {
             // Remove the remark on the following to debug all auto patches.
-            //HarmonyInstance.DEBUG = true;
-            instance.PatchAll(Assembly.GetExecutingAssembly());
+            HarmonyInstance.DEBUG = true;
+            Instance.PatchAll(Assembly.GetExecutingAssembly());
             // Keep the following remarked to also debug manual patches.
-            //HarmonyInstance.DEBUG = false;
+            HarmonyInstance.DEBUG = false;
         }
     }
 }

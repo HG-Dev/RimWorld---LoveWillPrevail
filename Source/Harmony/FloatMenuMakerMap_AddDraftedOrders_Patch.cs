@@ -32,7 +32,6 @@ namespace Suffixware.LoveWillPrevail.Harmony
                     if (entry.opinionOfOtherPawn > ModController.MIN_TRIGGER_OPINION
                         && GenSight.LineOfSight(clickCell, entry.otherPawn.Position, pawn.Map, true))
                     {
-                        Log.Message("Found loved ally near destination");
                         var ally = entry.otherPawn;
                         
                         //Check to see if that pawn is in danger and in sight
@@ -64,7 +63,6 @@ namespace Suffixware.LoveWillPrevail.Harmony
 
                 if (trigger)
                 {
-                    Log.Message("LWP: TRIGGERING + " + pawn.NameStringShort);
                     if (pawn.Inspired && pawn.InspirationDef != InspirationDefOfLWP.InspiredHeroic)
                     {
                         pawn.mindState.inspirationHandler.EndInspiration(pawn.Inspiration);
@@ -72,7 +70,6 @@ namespace Suffixware.LoveWillPrevail.Harmony
                     var success = pawn.mindState.inspirationHandler.TryStartInspiration(
                         InspirationDefOfLWP.InspiredHeroic
                         );
-                    if (!success) Log.Message("LWP: Triggering failed.");
                 }
             }
         }

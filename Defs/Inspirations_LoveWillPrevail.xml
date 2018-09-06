@@ -14,11 +14,7 @@
         <requiredCapacities>
             <li>Moving</li>
         </requiredCapacities>
-        <requiredSkills>
-            <Melee>10</Melee>
-        </requiredSkills>
         <!-- Experimental -->
-        <restFallFactorOffset>3</restFallFactorOffset>
         <statFactors>
             <MoveSpeed>2</MoveSpeed>
             <PainShockThreshold>5</PainShockThreshold>

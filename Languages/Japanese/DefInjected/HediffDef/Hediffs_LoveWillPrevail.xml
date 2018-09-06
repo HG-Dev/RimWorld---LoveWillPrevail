@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <LWP_Stress.label>悲壮な決意</LWP_Stress.label>
+    <LWP_Stress.Stages.0.label>治療済み</LWP_Stress.Stages.0.label>
+    <LWP_Stress.Stages.1.label>一所懸命</LWP_Stress.Stages.1.label>
+    <LWP_Stress.Stages.2.label>一所懸命</LWP_Stress.Stages.2.label>
+    <LWP_Stress.Stages.3.label>気疲れ</LWP_Stress.Stages.3.label>
+    <LWP_Stress.Stages.4.label>ショック</LWP_Stress.Stages.4.label>
+
+    <LWP_StressHardened.label>プロの決意</LWP_StressHardened.label>
+    <LWP_StressHardened.Stages.0.label>治療済み</LWP_StressHardened.Stages.0.label>
+    <LWP_StressHardened.Stages.1.label>一所懸命</LWP_StressHardened.Stages.1.label>
+    <LWP_StressHardened.Stages.2.label>一所懸命</LWP_StressHardened.Stages.2.label>
+    <LWP_StressHardened.Stages.3.label>気疲れ</LWP_StressHardened.Stages.3.label>
+    <LWP_StressHardened.Stages.4.label>回復中</LWP_StressHardened.Stages.4.label>
+
+</LanguageData>

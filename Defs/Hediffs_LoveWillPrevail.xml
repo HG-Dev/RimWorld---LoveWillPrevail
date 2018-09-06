@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef Name="LWPBase" Abstract="True">
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.35, 0.35)</defaultLabelColor>
+    <initialSeverity>0.001</initialSeverity>
+    <scenarioCanAdd>false</scenarioCanAdd>
+  </HediffDef>
+
+  <HediffDef ParentName="LWPBase">
+    <defName>LWP_Stress</defName>
+    <label>stress</label>
+    <initialSeverity>1</initialSeverity>
+    <minSeverity>0.05</minSeverity>
+	  <maxSeverity>6</maxSeverity>
+    <makesAlert>false</makesAlert>
+    <makesSickThought>false</makesSickThought>
+    <tendable>true</tendable>
+    <stages>
+      <!-- Treated by doctor -->
+      <li>
+        <becomeVisible>false</becomeVisible>
+        <label>managed</label>
+      </li>
+      <!-- Starting combat -->
+      <li>
+        <becomeVisible>false</becomeVisible>
+        <minSeverity>1</minSeverity>
+        <label>focused</label>
+        <capMods>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.5</offset>
+          </li>
+        </capMods>
+      </li>
+      <!-- Mid-combat -->
+      <li>
+        <becomeVisible>true</becomeVisible>
+        <minSeverity>2.6</minSeverity>
+        <label>focused</label>
+        <restFallFactor>1.5</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <!-- Late combat -->
+      <li>
+        <minSeverity>3.1</minSeverity>
+        <label>weary</label>
+        <restFallFactor>3</restFallFactor>
+        <painOffset>0.2</painOffset>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <!-- Post inspiration -->
+      <li>
+        <minSeverity>5</minSeverity>
+        <label>shaken</label>
+        <restFallFactor>1.2</restFallFactor>
+        <painOffset>0.05</painOffset>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <MentalBreakThreshold>0.05</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <disappearsAtTendedCount>1</disappearsAtTendedCount>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>10</severityPerDayNotImmune>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>20000</min>
+          <max>20001</max>
+        </disappearsAfterTicks>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="LWPBase">
+    <defName>LWP_StressHardened</defName>
+    <label>ninja mode</label>
+    <initialSeverity>1</initialSeverity>
+    <minSeverity>0.05</minSeverity>
+	  <maxSeverity>6</maxSeverity>
+    <chanceToCauseNoPain>1</chanceToCauseNoPain>
+    <makesAlert>false</makesAlert>
+    <makesSickThought>false</makesSickThought>
+    <tendable>true</tendable>
+    <stages>
+      <!-- Treated by doctor -->
+      <li>
+        <becomeVisible>false</becomeVisible>
+        <label>managed</label>
+      </li>
+      <!-- Starting combat -->
+      <li>
+        <becomeVisible>false</becomeVisible>
+        <minSeverity>1</minSeverity>
+        <label>focused</label>
+        <capMods>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.5</offset>
+          </li>
+        </capMods>
+      </li>
+      <!-- Mid-combat -->
+      <li>
+        <becomeVisible>true</becomeVisible>
+        <minSeverity>2.75</minSeverity>
+        <label>focused</label>
+        <restFallFactor>1.2</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <!-- Late combat -->
+      <li>
+        <minSeverity>3.2</minSeverity>
+        <label>weary</label>
+        <restFallFactor>1.8</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <!-- Post inspiration -->
+      <li>
+        <minSeverity>4.2</minSeverity>
+        <label>recovering</label>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>18000</min>
+          <max>18001</max>
+        </disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>10</severityPerDayNotImmune>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

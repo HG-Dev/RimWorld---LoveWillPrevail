@@ -2,7 +2,7 @@
 <LanguageData>
     <InspiredHeroic.label>悲壮な決意</InspiredHeroic.label>
     <InspiredHeroic.beginLetterLabel>悲壮な決意</InspiredHeroic.beginLetterLabel>
-    <InspiredHeroic.beginLetter>{0}は命懸けで愛する者を守ろうとしている。気疲れでスタミナが低下しています。</InspiredHeroic.beginLetter>
+    <InspiredHeroic.beginLetter>{0}は命懸けで親しい者を守ろうとしている。\n後の気疲れでスタミナが低下してしまいます。</InspiredHeroic.beginLetter>
     <InspiredHeroic.endMessage>{0}は疲れ切っている。</InspiredHeroic.endMessage>
     <InspiredHeroic.baseInspectLine>精神状態: 悲壮な決意</InspiredHeroic.baseInspectLine>
 </LanguageData>

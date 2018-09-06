@@ -18,7 +18,6 @@ namespace Suffixware.LoveWillPrevail
         {
             // Apply Harmony patches
             HarmonyStarter.RunPatches();
-            Log.Message("Love Will Prevail initialized.");
         }
     }
 }

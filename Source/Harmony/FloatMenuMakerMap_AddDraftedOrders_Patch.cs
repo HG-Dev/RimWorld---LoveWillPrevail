@@ -37,8 +37,10 @@ namespace Suffixware.LoveWillPrevail.Harmony
                             || ally.Downed
                             || ally.IsFighting()
                         );
+
                         if (trigger) break;
                         /*if (!trigger && IsNinja(pawn)) //If no obvious threats, but ally is  fighting and pawn is ninja
+                        if (!trigger)
                         {
                             //Check battle log for scrapes
                             foreach (var battleIncident in Find.BattleLog.RawEntries)

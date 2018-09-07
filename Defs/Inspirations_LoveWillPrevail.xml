@@ -26,7 +26,7 @@
         </statFactors>
         <statOffsets>
             <MeleeDPS>5</MeleeDPS>
-            <ShootingAccuracy>5</ShootingAccuracy>
+            <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
             <MeleeHitChance>1</MeleeHitChance>
             <MeleeDodgeChance>1</MeleeDodgeChance>
             <SharpDamageMultiplier>3</SharpDamageMultiplier>

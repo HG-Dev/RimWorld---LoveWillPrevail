@@ -88,7 +88,7 @@
     </stages>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
-        <disappearsAtTendedCount>1</disappearsAtTendedCount>
+        <disappearsAtTotalTendQuality>1</disappearsAtTotalTendQuality>
       </li>
       <li Class="HediffCompProperties_Immunizable">
         <severityPerDayNotImmune>10</severityPerDayNotImmune>

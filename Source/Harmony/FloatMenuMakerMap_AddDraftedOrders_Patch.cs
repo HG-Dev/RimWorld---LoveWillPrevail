@@ -23,12 +23,13 @@ namespace Suffixware.LoveWillPrevail.Harmony
                 bool trigger = IsNinja(pawn);
                 // Get pawns near clickCell and determine if any of them can be a Trigger
                 var socialEntries = SocialInfoUtility.GetSocialEntries(pawn);
+                Pawn ally = null;
                 foreach (var entry in socialEntries)
                 {
                     if (entry.opinionOfOtherPawn > ModController.MIN_TRIGGER_OPINION
                         && (trigger || (clickCell - entry.otherPawn.Position).LengthHorizontalSquared < 36))
                     {
-                        var ally = entry.otherPawn;
+                        ally = entry.otherPawn;
                         //Check to see if that pawn is in danger and nearby clicked spot
                         //Quick trigger
                         trigger = (
@@ -53,7 +54,7 @@ namespace Suffixware.LoveWillPrevail.Harmony
                 }
                 if (trigger)
                 {
-                    Log.Message("Triggering");
+                    Log.Message(string.Format("Triggering {0} for {1} ", pawn.Name,  ally.Name));
                     if (pawn.mindState.inspirationHandler.TryStartInspiration(
                         InspirationDefOfLWP.InspiredHeroic
                         ))
